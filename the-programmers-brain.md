@@ -53,7 +53,7 @@ The best way to remember things is spaced out repetition. Also helpful is elabor
 
 ### Chapter 4. How to read complex code
 
-Short term memory is used to remember things, while your working memory is used to process information. Both STM and working memory can hold 2 to 6 items at a time. When a problems contains too many elements that cannot be divided into chunks, the working memory gets overloaded.
+Short term memory is used to remember things, while your working memory is used to process information. Both STM and working memory can hold 2 to 6 items at a time. When a problem contains too many elements that cannot be divided into chunks, the working memory gets overloaded.
 
 Three types of cognitive load are distinguished:
 
@@ -70,3 +70,65 @@ There are several ways to reduce load:
 * (Cognitive) refactoring - Refactoring can make code easier to understand, but it's not always more maintainable in the long run. So you could refactor temporarily, just to get a better mental picture. An example of this is inlining code of a function call. This type of refactoring is often meant for a single person. If they turn out valuable, they can always be merged.
 * Replacing unfamiliar language constructs - If you have a hard time understanding part of the syntax you could temporarily replace that syntax with a more familiar one to help understanding. These are also nice to add to the flashcards mentioned previously.
 * Creating a dependency graph or creating a state table can help you more effectively reason about a piece of code. Tracking and highlighting a variable or function call throughout a longer version can also help you piece together how it is used.
+
+## Part 2 - On thinking about code
+
+### Chapter 5 - Reaching a deeper understanding about code
+
+#### Variable frameworks and roles
+
+In order to understand code better it helps to use a variable framework like the one defined by Jorma Sajaniemi, that divides variables into 11 categories: Fixed value, stepper, flag, walker, most recent holder, most wanted holder, gatherer, container, follower, organizer and temporary. Classifying each variable in the piece of code can help you understand it better and communicate more effectively about it.
+
+Apps Hungarian notation  (Charles Simonyi) is often wrongly understood to mean you put the type of a variable in front of it, e.g. strName. However, in the original proposal it goes much deeper, like putting c in front for Count, or min/max for minima and maxima. Even though it's not popular today, there is still value in having a shared convention.
+
+#### Gaining a deeper knowledge
+
+Nancy Pennington defined different levels of understanding computer programs. Text knowledge is understanding the syntax of a particular piece of code and being able to read what the program is doing. Plan knowledge is understanding not the individual lines of code, but the intent behind them, which is often concepts not only hidden in keywords and variables, but how parts of the code are related to each other and why.
+
+Jonathan Sillito has defined a typical four step process on how understanding about code is formed:
+
+* Finding a focal point in code
+* Expanding knowledge from that focal point
+* Understanding a concept from a set of related entities
+* Understanding a concept across multiple related entities.
+
+Some techniques and frameworks like dependency injection (and, writers note, also microservices with poor boundaries!) can fragment focal points making it harder to form an understanding. You will have textual knowledge, but it's harder to form plan knowledge. 
+
+This technique can be applied concretely by e.g:
+
+* Circling all variables
+* Link similar variables
+* Circle all methods and function calls
+* Link methods/functions to their definitions
+* Circle all instances of classes
+* Draw a link between classes and their instances
+
+#### Reading text is similar to reading code
+
+Research by Peter Siebel has indicated that around 60% of a programmers work is spent with reading code, yet not a lot of programmers practice reading it. Because we lack techniques to read code more effectively, we often read it line by line, which leads to *i'll build it myself*, because it's easier to write new code than to understand existing code.
+
+Research by Janet Sigmund has shown that besides brain areas related to attention and working memory, the brain regions that are activated when writing code are ones related to natural language processing.
+
+Chantal Prat showed that, surprisingly, mathematical ability is far less of a predictor for programming ability than your ability to process natural language. Working memory was the best predictor overall.
+
+Similar to reading text, it has been shown by Hidetake Uwano that programmers read 70% of a piece of code in the first 30% of time, which means that they will scan it first instead of reading it line by line.
+Experts are more experienced in following the call stack while reading unknown code, while novices read line by line. Apparently tracing the call stack is a skill that has to be acquired with experience.
+
+There are several text comprehension strategies that can be applied to code:
+
+* Activating: Actively thinking about related things to retrieve prior knowledge
+* Monitoring - Keeping track of your understanding of a text
+* Determining importance - Deciding what parts of a text are most relevant
+* Inferring - Filling in facts that are not explicitly given in the text
+* Visualizing - Drawing diagrams of the read text to deepen understanding
+* Questioning - Asking questions about the text at hand
+* Summarizing - Creating a short summary of a text
+
+
+### Chapter 6 - Getting better at solving programming problems
+
+#### Using models to think about code
+
+Mental models can help communicate to others about the code, as well as offload some cognitive load when your working memory is almost full. They also help retrieve relevant memories from LTM. Using different types of models that focus on different aspect of the problem can help you focus your attention. Not all models are equally helpful, which model you use impacts the time you take to solve a problem and how effectively you do so.
+
+Mental models create an abstraction in working memory which helps you reason about the problem at hand. Models can also work against us, for example when stepping through a highly optimized piece of code, it is likely that it will not execute the way we had originally envisioned.
