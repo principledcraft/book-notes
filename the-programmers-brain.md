@@ -132,3 +132,40 @@ There are several text comprehension strategies that can be applied to code:
 Mental models can help communicate to others about the code, as well as offload some cognitive load when your working memory is almost full. They also help retrieve relevant memories from LTM. Using different types of models that focus on different aspect of the problem can help you focus your attention. Not all models are equally helpful, which model you use impacts the time you take to solve a problem and how effectively you do so.
 
 Mental models create an abstraction in working memory which helps you reason about the problem at hand. Models can also work against us, for example when stepping through a highly optimized piece of code, it is likely that it will not execute the way we had originally envisioned.
+
+#### Characteristics of mental models
+
+* Mental models are a simplification of reality. They can be useful if irrelevant details are abstracted away.
+* Mental models can change, are not stable. Parts of the model can also be forgotten if people do not engage with it enough.
+* Multiple mental models can coexist with each other even if they contradict. Novices can also hold incorrect mental models that are locally coherent but not globally.
+* Mental models can be weird and feel like superstitions. People can believe things that do not really make sense.
+* People are frugal when using mental models, because they take a lot of energy (e.g. people rather run again to check if it works now than to reason about it).
+
+When learning a new model, it will not always fully replace an old mental model. In situations of high cognitive load, you might thus fall back on an old incorrect model.
+
+#### Mental models in working memory
+
+Johnson-Laird described mental models as being held in working memory. Having an abstract mental model helps you reduce cognitive load when reasoning about code. Having a more concrete mental model with more details makes it easier to reason about the code at hand.
+
+To create a mental model of complex code you can:
+
+* Begin with local models
+* List all objects in the codebase and the relationship between objects
+* Answer questions about the model and use those to refine the model further
+
+#### Mental models in LTM
+
+Dedre Gentner and Albert Stevens considered models being stored in LTM and they can thus be retrieved when needed, similar to how schemata and connected ideas are stored in LTM. These can also be trained with flash cards: think about e.g. data structures, design and architecture patterns and diagrams. Besides training, it can also be used as an index if you are unsure which pattern to apply.
+
+Mental models both exist in working memory and LTM and those in working memory are influenced by those in LTM.
+
+#### Notional machines
+
+A notional machine (as coined by Ben du Boulay) is the correct and consistent abstraction of the execution of a programming language, even though it might not fully represent reality. They differ from mental models as those can be incorrect and inconsistent. The more you learn about a programming language, the closer your mental model comes to the notional machine. A notional machine is the abstraction we use to reason about a computers functioning at a level that's needed at any given time. Many notional machines can be used at the same time; they can also build on top of each other and be expanded upon. Sometimes, different notional machines can conflict or cause confusion, so it is worth thinking about which notional machine you use. Wrong abstractions can still stay in LTM and thus pop up in working memory.
+
+Notional machines can abstract things at different levels, e.g. programming language vs bytecode. It's important to realise which details you are abstracting away when using notional machine since these might be relevant to the problem you are solving.
+
+Notional machines are often used in communication about code.
+When choosing a notional machine to communicate with someone, it's important to try to use terms they might be familiar with, as it relates to the already formed schemata in LTM.
+
+Notional machines are not semantics, as semantics try to formalize programs precisely using mathematics, not abstract notions.
