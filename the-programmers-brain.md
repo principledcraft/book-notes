@@ -169,3 +169,52 @@ Notional machines are often used in communication about code.
 When choosing a notional machine to communicate with someone, it's important to try to use terms they might be familiar with, as it relates to the already formed schemata in LTM.
 
 Notional machines are not semantics, as semantics try to formalize programs precisely using mathematics, not abstract notions.
+
+### Chapter 7 - Misconceptions - Bugs in thinking
+
+Information stored in LTM helps you learn new things, this is called *transfer during learning*. Elaboration, deliberately linking new knowledge to already known concepts helps with transfer during learning. Transfer of learning is when you apply things you have already learned to completely unfamiliar situations.
+
+The amount of learning you can transfer is related to:
+
+* Mastery - How well are the things you already know stored in your LTM
+* Similarity - How similar two tasks are.
+* Context - How similar is the environments are.
+* Critial attributes - How clear it is that knowledge is beneficial
+* Association - How strong you feel that tasks are similar.
+* Emotions - If you feel about something positively, it is easier to transfer that to something new
+
+There are different froms of transfer
+
+* Low road transfer - Unconscious transfer of automated skills
+* High road tranfer - Conscious tranfer of skills
+* Near transfer - Transfer of knowledge between domains that are near
+* Far transfer - Transfer of knowledge between domains that are further apart, making it less likely that transfer will occur.
+* Positive transfer - Occurs when previous knowledge helps learn something new
+* Negative transfer - Occurs when previous knowledge hinders learning something new or leads to wrong assumptions.
+
+Transfer is not always given. Research has not shown that skills like chess or programming transfer to higher intelligence or skills in other domains. When learning a new language it might be worth it to pick something radically different as it is more likely to broaden your knowledge.
+
+Paying deliberate attention to similarities and differences when learning a new language can help learn more quickly.
+
+#### Misconceptions
+
+Misconceptions are:
+
+* Faulty
+* Held with confidence
+* Held consistently across different situations
+
+In order to get rid of a misconception, you don't just need new knowledge, but the faulty knowledge needs to be replaced. This is conceptual change, which is harder than regular learning. Therefore it can be hard to unlearn concepts when learning a new programming language.
+Multiple (including incorrect) notions can be present at the same time and pop up again when dealing with more complicated tasks. When being more self conscious (inhibition) a correct notion can prevail over an incorrect one.
+
+Prevent misconceptions when learning new languages by:
+
+* Always keeping an open mind
+* Find a list of common misconceptions so you are more aware
+* Find people that also learned these programming languages in the same order and ask for advice.
+
+To prevent misconceptions in a new codebase:
+
+* Pair program to test your assumptions
+* Run your code and/or use a test suite
+* Document common patterns and or misconceptions so others don't fall for the same trap.
