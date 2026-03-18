@@ -49,7 +49,7 @@ You can expand the set of flash cards as you encounter new things, and thin them
 
 It's good for your memory to actively try to retrieve a bit of information from memory before trying to look it up. 
 
-The best way to remember things is spaced out repetition. Also helpful is elaboration where you actively think about what you are trying to remember and connecting it to other memories, since memories are stored as part of a network. Strengthening these connections helps retrain the memory better.
+The best way to remember things is spaced out repetition. Also helpful is elaboration where you actively think about what you are trying to remember and connecting it to other memories, since memories are stored as part of a network. Strengthening these connections helps retain the memory better.
 
 ### Chapter 4. How to read complex code
 
@@ -124,7 +124,6 @@ There are several text comprehension strategies that can be applied to code:
 * Questioning - Asking questions about the text at hand
 * Summarizing - Creating a short summary of a text
 
-
 ### Chapter 6 - Getting better at solving programming problems
 
 #### Using models to think about code
@@ -178,15 +177,15 @@ The amount of learning you can transfer is related to:
 
 * Mastery - How well are the things you already know stored in your LTM
 * Similarity - How similar two tasks are.
-* Context - How similar is the environments are.
-* Critial attributes - How clear it is that knowledge is beneficial
+* Context - How similar the environments are.
+* Critical attributes - How clear it is that knowledge is beneficial
 * Association - How strong you feel that tasks are similar.
 * Emotions - If you feel about something positively, it is easier to transfer that to something new
 
-There are different froms of transfer
+There are different forms of transfer
 
 * Low road transfer - Unconscious transfer of automated skills
-* High road tranfer - Conscious tranfer of skills
+* High road transfer - Conscious transfer of skills
 * Near transfer - Transfer of knowledge between domains that are near
 * Far transfer - Transfer of knowledge between domains that are further apart, making it less likely that transfer will occur.
 * Positive transfer - Occurs when previous knowledge helps learn something new
@@ -218,3 +217,80 @@ To prevent misconceptions in a new codebase:
 * Pair program to test your assumptions
 * Run your code and/or use a test suite
 * Document common patterns and or misconceptions so others don't fall for the same trap.
+
+## Part 3 - On writing better code
+
+### Chapter 8 - How to get better at naming things
+
+Good names help you better activate things you already know in your LTM. Bad names can cause you to make assumptions, leading to misconceptions.
+Naming is also hard, especially when coding and trying to form a mental model, picking an easy name reduces cognitive load.
+
+Phile Karlton, a programmer at Netscape said 'There are only two hard things in programming, cache invalidation and naming things'. Berthold Badler, a professor at Jerusalem University ran an experiment, where the median probability of a variable being named identically was only 7%.
+
+#### Why naming is important
+
+* Names take up a lot of the codebase - 33% of tokens and 72% of characters
+* Names appear in code reviews. One in four reviews mention something about a name.
+* Names are a form of documentation 
+* Names can serve as beacons for forming a mental model
+
+#### Naming things
+
+Simon Butler of Open University in the UK defined a set of semantic conventions for naming (which should help reduce cognitive load according to Hermans):
+
+* Use proper capitalization
+* Dictionary words only
+* Between two and four words
+* Identifier names should not be fewer than eight chars with exception of c, d, e,g, i, in, InOut, j, k, m, n, o, out, t, x, y, z.
+* Identifiers should not begin or end in underscores (writers note: I see an exception for Python private vars convention here.)
+* No hungarian notation
+* Long identifier names should be avoided where possible
+* Identifiers should not combine upper and lower case chars in unusual ways
+* Identifiers should not be composed of solely a numeric value (e.g. fifty)
+
+It might seem over the top but unnecessary information can cause higher cognitive load. Many programming languages contain naming standards, it's good to adopt those where possible. Allemanis argues that names across codebases should be consistent help with chunking.
+
+Lawrie found that naming does not improve when a codebase evolves, underlining the importance of good naming conventions from the start. Same goes for tests, new developers often copy existing conventions.
+
+Seeing that researchers differ on the right approach we can see how subjective this still is.
+
+Good names help retrieve relevant concepts from your LTM.
+
+Good names can contain:
+
+* Domain knowledge
+* Knowledge about programming concepts
+* Knowledge about conventions (like using i or j for a counter)
+
+#### When to evaluate your naming
+
+During coding cognitive load is often high, so it is not the best time to evaluate naming. Instead, while reviewing your code you can ask:
+
+* Without knowing the code, are names clear? Do you understand the words used?
+* Are any of the names ambiguous or unclear?
+* What names are similar, and are their usages also similar or not?
+
+#### What types of names are easier to understand
+
+It has been shown in research (Lawrie, Hofmeister) that identifier names consisting of words are easier to understand and aid in finding bugs faster. However, longer variable names are harder to remember, specifically the number of syllables. It is recommended not to use names with a prefix or suffix.
+
+Apart from a few specific cases, like e.g. s for strings and i,j,n or z,y,z for ints. It has been shown (Beniamini) that there is a wide variability in prescribed meaning of single letter names. Thus it is better to use whole words to improve comprehension.
+
+Camel case has been shown (Binkley) to lead accuracy, with the sacrifice of speed. However, if one is used to camel case they will be slower at snake case and vice versa. If you get to pick a convention, it might be best to pick camel case.
+
+#### Names and bugs
+
+Butler found correlation between pieces of code with bad names and a higher number of bugs. Of course this does not mean causation. It could be written by a novice programmer, or cognitive load when writing this piece of code was high. Bad naming could be an good indicator for code that can be improved. Improving naming can make it easier to solve bugs.
+
+#### Choosing better names
+
+Name molds (Feitelson) - the different ways variables can be represented even though the meaning is the same (e.g. y_max, vs max_y or max_benefit_amount vs benefit_max). Different styles can be used throughout the codebase, discussing it and choosing similar molds can help with comprehension.
+
+Feitelson defines a 3 step model for choosing a name (not necessarily in this particular order):
+
+* Select the concepts to include in the name
+  * What does the object used for and what information does it hold and what does it represent (e.g. a unit like m or kg). If there is a comment close to the name, words from the comment should probably be included in the name. Or if input is not validated (unsafe) vs when it is (safe).
+* Choose the words that represent these concepts
+  * This can vary widely between programmers. A project lexicon in which synonyms are registered for common concepts can help.
+* Construct a name using these words
+  * Choose consistent name molds across the project. Also format them in a way they occur in natural language. E.g. for 'The maximum number of points' choose 'maximum_points' over 'points_max' or include prepositions like indexOf or elementAt.
