@@ -107,7 +107,7 @@ This technique can be applied concretely by e.g:
 
 Research by Peter Siebel has indicated that around 60% of a programmers work is spent with reading code, yet not a lot of programmers practice reading it. Because we lack techniques to read code more effectively, we often read it line by line, which leads to *i'll build it myself*, because it's easier to write new code than to understand existing code.
 
-Research by Janet Sigmund has shown that besides brain areas related to attention and working memory, the brain regions that are activated when writing code are ones related to natural language processing.
+Research by Janet Siegmund has shown that besides brain areas related to attention and working memory, the brain regions that are activated when writing code are ones related to natural language processing.
 
 Chantal Prat showed that, surprisingly, mathematical ability is far less of a predictor for programming ability than your ability to process natural language. Working memory was the best predictor overall.
 
@@ -225,7 +225,7 @@ To prevent misconceptions in a new codebase:
 Good names help you better activate things you already know in your LTM. Bad names can cause you to make assumptions, leading to misconceptions.
 Naming is also hard, especially when coding and trying to form a mental model, picking an easy name reduces cognitive load.
 
-Phile Karlton, a programmer at Netscape said 'There are only two hard things in programming, cache invalidation and naming things'. Berthold Badler, a professor at Jerusalem University ran an experiment, where the median probability of a variable being named identically was only 7%.
+Phil Karlton, a programmer at Netscape said 'There are only two hard things in programming, cache invalidation and naming things'. Berthold Badler, a professor at Jerusalem University ran an experiment, where the median probability of a variable being named identically was only 7%.
 
 #### Why naming is important
 
@@ -274,13 +274,13 @@ During coding cognitive load is often high, so it is not the best time to evalua
 
 It has been shown in research (Lawrie, Hofmeister) that identifier names consisting of words are easier to understand and aid in finding bugs faster. However, longer variable names are harder to remember, specifically the number of syllables. It is recommended not to use names with a prefix or suffix.
 
-Apart from a few specific cases, like e.g. s for strings and i,j,n or z,y,z for ints. It has been shown (Beniamini) that there is a wide variability in prescribed meaning of single letter names. Thus it is better to use whole words to improve comprehension.
+Apart from a few specific cases, like e.g. s for strings and i,j,n or x,y,z for ints. It has been shown (Beniamini) that there is a wide variability in prescribed meaning of single letter names. Thus it is better to use whole words to improve comprehension.
 
 Camel case has been shown (Binkley) to lead accuracy, with the sacrifice of speed. However, if one is used to camel case they will be slower at snake case and vice versa. If you get to pick a convention, it might be best to pick camel case.
 
 #### Names and bugs
 
-Butler found correlation between pieces of code with bad names and a higher number of bugs. Of course this does not mean causation. It could be written by a novice programmer, or cognitive load when writing this piece of code was high. Bad naming could be an good indicator for code that can be improved. Improving naming can make it easier to solve bugs.
+Butler found correlation between pieces of code with bad names and a higher number of bugs. Of course this does not mean causation. It could be written by a novice programmer, or cognitive load when writing this piece of code was high. Bad naming could be a good indicator for code that can be improved. Improving naming can make it easier to solve bugs.
 
 #### Choosing better names
 
@@ -294,3 +294,28 @@ Feitelson defines a 3 step model for choosing a name (not necessarily in this pa
   * This can vary widely between programmers. A project lexicon in which synonyms are registered for common concepts can help.
 * Construct a name using these words
   * Choose consistent name molds across the project. Also format them in a way they occur in natural language. E.g. for 'The maximum number of points' choose 'maximum_points' over 'points_max' or include prepositions like indexOf or elementAt.
+
+### Chapter 9 - Avoiding bad code and cognitive load
+
+Code with code smells is more likely to contain bugs, and it is also more likely to change than code without smells (Foutse Khomh).
+
+Different code smells can cause different effects, some examples:
+
+* Long parameter list, complex switch statements - overload working memory
+* God class, long method - Hinder efficient chunking, leads to reading code line by line.
+* Duplicate code - Chunking gone wrong. - Similar looking code can be different in practice, leading to misconceptions.
+
+Structural antipatterns - code is correct but not structured on a way to make it easy to work with
+Conceptual antipatterns - The code is structured neatly but the names used in the code are confusing.
+
+Arnaoudova describes the following linguistic antipatterns:
+
+* Methods do more than they say they do
+* Methods say more than they actually do
+* Methods that say the opposite of what they do
+* Identifiers that say the contain more than they actually contain
+* Identifiers whose names say that they contain less than they do
+* Identifiers that contain the opposite of what the entity contains
+
+When studying these in open source codebases it was quite prevalent. E.g. 64 percent of variables starting with 'is' are not boolean. Science confirms that these antipatterns create a higher cognitive load (Fakhoury). It might lead you to retrieve wrong information form your LTM, or make assumptions causing you not to investigate further.
+
