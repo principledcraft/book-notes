@@ -454,7 +454,7 @@ Green, Blackwell and Petre defined a framework to look at the cognitive dimensio
 * Provisionality and progressive evaluation vs. error proneness. The easier it is to work with and run imperfect code, the more likely it is that this code is never properly finished but used instead, increasing the chance of errors.
 * Role expression vs diffuseness - Adding additional syntactic elements such as keyword arguments and types can increase role expression, but increase diffuseness.
 
-### Dimensions and activities
+#### Dimensions and activities
 
 * Searching -  Hidden dependencies can harm searching. Diffuseness causes code to be longer which harms searching. Secondary notation can help searchability.
 * Comprehension - low visibility can harm comprehension because it is harder to see how things relate, making understanding harder. Role expressiveness can help comprehension.
@@ -463,3 +463,74 @@ Green, Blackwell and Petre defined a framework to look at the cognitive dimensio
 * Exploration - Explored by good progressive evaluation and provisionality. Hard mental operations and abstractions can harm exploration because they place a higher cognitive load on the programmer (writers note: but doesn't abstraction make it easier? I'd say the lack of abstraction harms exploration).
 
 Knowing which activities will most likely be conducted in the codebase can help you choose the right design decisions. Based on the lifetime of the code the emphasis might also change.
+
+### Chapter 13 - How to onboard new developers
+
+Many software engineers are not trained in onboarding, making the process frustrating for both sides. What typically happens:
+
+* The senior overloads the newcomer with a lot of information
+* Then they give the newcomer a task, which the senior views as extremely simple
+* which they cannot do due to cognitive load being too high due to missing context, domain knowledge or automatized programming skills or lack of relevant chunks being absent.
+
+As we know, if cognitive load is too high, the capacity to store relevant memories is reduced, making it hard to remember what was taught.
+
+This can be caused by something called the curse of expertise. This is where an expert has forgotten that the knowledge they have which is second nature to them is actually very hard to acquire. This means that they will more often see tasks as easy or trivial.
+
+#### Differences between experts and novices
+
+Experts do not necessarily have all the answers, but they do possess more episodic memories and automatized skills, as well as the ability to perform better chunking, while a novice might have to read the code line by line to form understanding.
+
+#### Neo-Piagetian model for programmers
+
+The model by Piaget for child development can be mapped to programming in the following way:
+
+* Sensorimotor stage - Programmer has understanding of how the program executes, but cannot correctly trace a program. This happens with people with no prior experience, or when switching between radically different languages. It has no use explaining high-level concepts if execution cannot be understood at a low level.
+* Preoperational stage - A programmer can predict the outcome of a few lines of code, and often makes guesses of what the code does. They do not oversee larger concepts in the code.
+* Concrete operation stage - Programmer reasons about code deductively by reading rather than using induction. Can reason about code based on names, variables, and chunks. Still lacks a complete understanding of entire codebase which makes them unsure about which strategy is the right one, leading them to get stuck on an approach rather than to reflect if that is the right one. Diagrams etc can help here.
+* Formal operational stage - Programmer can reason logically, consistently and systematically. Includes reflecting on your own actions, which is essential for debugging. Not so interesting for the onboarding process (writers note: I disagree here, especially if they are new it is helpful for understanding and chunking that the code is structured regardless of experience)
+
+These stages seem to follow one another, but in reality they are mixed. Depending on context, someone might fall back to a lower level for certain tasks compared to others.
+
+#### Seeing concepts concretely vs abstractly
+
+Explanations can be given in very abstract and very concrete terms. Maton showed that beginners benefit from both types of explanations. First the beginner needs to learn the high level concept, followed by a concrete example. Then there should be time to step up again in abstraction level, allowing someone to take the more general abstraction and storing it in their LTM, now having gained a better understanding.
+
+This can go wrong if:
+
+1. Only abstract concepts are used for explanation
+2. Only concrete concepts are used for explanation
+3. First an abstract explanation is used followed by a concrete one, but then there is no time to go back up one abstraction level, thus not allowing the *repacking* of this information for storage in LTM.
+
+#### Activities to support the onboarding process
+
+It is best to have them do only one task at a time to reduce cognitive load, also due to context switching. A suggestion of a task for each type of activity is given below:
+
+* Exploration - Browsing the codebase to get an overview
+* Searching - Finding a class that implements a particular feature
+* Transcription - Giving them a very clear plan and having them implement e.g. a new method
+* Comprehension - Focused on understanding, e.g. having them summarize a part of the code in natural language.
+* Incrementation - Adding a feature to a class, including the creation of the plan for the feature.
+
+The activities listed below can build on each other, and you can switch them up between coding tasks and e.g. learning more about the domain based on prior knowledge and experience.
+
+### Support the memory of the person onboarding
+
+Patience and empathy is key. Make sure to present all relevant information and concepts both in code and domain and explain them thoroughly, both abstractly and concretely. Having these things will likely also help existing developers by offloading some thinking. Separate learning about the domain from learning about the code. You could even prepare flashcards for both.
+
+What often happens is that existing developers show the code to a newcomer and immediately ask them to implement something. This is likely to fail since the STM is overloaded with both trying to understand the code, the domain and the goal.
+
+Giving them small focussed tasks helps with allowing room to store things in LTM. Also having some summary documentation helps other newcomers and existing developers. They could still implement something, but then eliminate things like searching for the right place. You could prepare that beforehand.
+
+It can be tempting to start by showing diagrams, but as shown before, this is not always helpful. Always evaluate when using this technique and step away from it if the person is not yet at the point when diagrams / drawings etc. are useful.
+
+#### Reading code together
+
+The text comprehension techniques mentioned earlier can also be used when onboarding someone, since applying these techniques (for them) can also reduce their cognitive load.
+
+* Activating - Explain relevant concepts before the code reading session starts
+* Determining importance - It can be hard for a newcomer to determine what's important. So pointing out the most important parts beforehand can help.
+* It can be hard to know details not explicitly mentioned but that have to be inferred. You can point them out or maybe they have already been documented somewhere else.
+* Monitoring - Regularly check the level of understanding by asking questions or asking them to give a quick summary of concepts or parts of the code and help them improve their understanding while doing so.
+* Visualize - Either ask the newcomer to draw a diagram to further their understanding or prepare it yourself beforehand to help with teaching.
+* Questioning - Ask them questions, or encourage them to ask questions as well. When you see they start guessing answers, it is probably a signal that they are starting to suffer from cognitive overload.
+* Summarize - A summary of a piece of code can be submitted to the codebase as documentation. This is a good task for a newcomer to do because it also teaches them the general workflow of the codebase.
