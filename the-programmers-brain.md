@@ -25,10 +25,8 @@ Three different processes work together while coding
 
 * Long term memory
   * Holds knowledge that needs to be accessed after a long period of time.
-
 * Short term memory
   * Can temporarily hold concepts while working, like a variable or method name.
-
 * Working memory
   * Where active processing takes place, e.g. making a decision on how to structure a piece of code.
 
@@ -51,7 +49,7 @@ It's good for your memory to actively try to retrieve a bit of information from 
 
 The best way to remember things is spaced out repetition. Also helpful is elaboration where you actively think about what you are trying to remember and connecting it to other memories, since memories are stored as part of a network. Strengthening these connections helps retain the memory better.
 
-### Chapter 4. How to read complex code
+### Chapter 4 - How to read complex code
 
 Short term memory is used to remember things, while your working memory is used to process information. Both STM and working memory can hold 2 to 6 items at a time. When a problem contains too many elements that cannot be divided into chunks, the working memory gets overloaded.
 
@@ -384,15 +382,24 @@ Worked examples can include:
 
 Petre and Blackwell defined the cognitive dimensions of notation (CDN) framework, which discusses several activities during programming and their cognitive impact:
 
-* Searching - You are reading an executing code to search for something in particular. This is hard on STM, you have to remember the problem and what avenues of code you already explored. Therefore it is best to offload pieces of your cognitive load to notes or a separate document. It can also be helpful to leave little breadcrumbs in the form of comments while searching, especially if you cannot finish the search in one go.
+* Searching - You are reading an executing code to search for something in particular. This is hard on STM, you have to remember the problem and what avenues of code you already explored.
+  * It is best to offload pieces of your cognitive load to notes or a separate document.
+  * It can also be helpful to leave little breadcrumbs in the form of comments while searching, especially if you cannot finish the search in one go.
 
-* Comprehension - Similar to search, but here you do not have a good understanding of what the code does in detail. Here refactoring can help as well as offloading working memory by e.g. drawing a model, and update it if you learn more. This helps not having to get it from your memory later. It can also help prevent misconceptions. If you continue at a later time, this model can help you get back into the task.
+* Comprehension - Similar to search, but here you do not have a good understanding of what the code does in detail.
+  * Refactoring can help as well as offloading working memory by e.g. drawing a model, and update it if you learn more.
+  * This helps not having to get it from your memory later. It can also help prevent misconceptions.
+  * If you continue at a later time, this model can help you get back into the task.
 
 * Transcription - The part where you have a plan and are just coding. Its mainly hard on LTM since you have to recall syntax and patterns for implementation.
 
-* Incrementation - A mix of all three where you search and try to understand the code to later add e.g. a new  feature. This is the most common form you encounter as a programmer. Since it encompasses all three, it needs the most support memory wise, especially if you are new to the codebase. Split up a big task in smaller tasks and be deliberate on which subtask you are working on. This can help retrieve relevant concepts from memory. First search, then try to comprehend and only then increment.
+* Incrementation - A mix of all three where you search and try to understand the code to later add e.g. a new feature. This is the most common form you encounter as a programmer.
+  * Since it encompasses all three, it needs the most support memory wise, especially if you are new to the codebase.
+  * Split up a big task in smaller tasks and be deliberate on which subtask you are working on. This can help retrieve relevant concepts from memory.
+  * First search, then try to comprehend and only then increment.
 
-* Exploration - Similar to incrementation, when trying out a new concept or blocking out a piece of code. Since it also involves all aforementioned processes, here too offloading can be a good idea, for example by drawing a rough sketch of the concept or a diagram.
+* Exploration - Similar to incrementation, when trying out a new concept or blocking out a piece of code.
+  * Since it also involves all aforementioned processes, here too offloading can be a good idea, for example by drawing a rough sketch of the concept or a diagram.
 
 Debugging can be described as a mix of all 5 of these activities.
 
@@ -484,10 +491,21 @@ Experts do not necessarily have all the answers, but they do possess more episod
 
 The model by Piaget for child development can be mapped to programming in the following way:
 
-* Sensorimotor stage - Programmer has understanding of how the program executes, but cannot correctly trace a program. This happens with people with no prior experience, or when switching between radically different languages. It has no use explaining high-level concepts if execution cannot be understood at a low level.
-* Preoperational stage - A programmer can predict the outcome of a few lines of code, and often makes guesses of what the code does. They do not oversee larger concepts in the code.
-* Concrete operation stage - Programmer reasons about code deductively by reading rather than using induction. Can reason about code based on names, variables, and chunks. Still lacks a complete understanding of entire codebase which makes them unsure about which strategy is the right one, leading them to get stuck on an approach rather than to reflect if that is the right one. Diagrams etc can help here.
-* Formal operational stage - Programmer can reason logically, consistently and systematically. Includes reflecting on your own actions, which is essential for debugging. Not so interesting for the onboarding process (writers note: I disagree here, especially if they are new it is helpful for understanding and chunking that the code is structured regardless of experience)
+* Sensorimotor stage - Programmer has understanding of how the program executes, but cannot correctly trace a program.
+  * This happens with people with no prior experience, or when switching between radically different languages.
+  * It has no use explaining high-level concepts if execution cannot be understood at a low level.
+
+* Preoperational stage - A programmer can predict the outcome of a few lines of code, and often makes guesses of what the code does.
+  * They do not oversee larger concepts in the code.
+
+* Concrete operation stage - Programmer reasons about code deductively by reading rather than using induction.
+  * Can reason about code based on names, variables, and chunks.
+  * Still lacks a complete understanding of entire codebase which makes them unsure about which strategy is the right one, leading them to get stuck on an approach rather than to reflect if that is the right one.
+  * Diagrams etc can help here.
+
+* Formal operational stage - Programmer can reason logically, consistently and systematically.
+  * Includes reflecting on your own actions, which is essential for debugging.
+  * Not so interesting for the onboarding process (writers note: I disagree here, especially if they are new it is helpful for understanding and chunking that the code is structured regardless of experience)
 
 These stages seem to follow one another, but in reality they are mixed. Depending on context, someone might fall back to a lower level for certain tasks compared to others.
 
@@ -513,7 +531,7 @@ It is best to have them do only one task at a time to reduce cognitive load, als
 
 The activities listed below can build on each other, and you can switch them up between coding tasks and e.g. learning more about the domain based on prior knowledge and experience.
 
-### Support the memory of the person onboarding
+#### Support the memory of the person onboarding
 
 Patience and empathy is key. Make sure to present all relevant information and concepts both in code and domain and explain them thoroughly, both abstractly and concretely. Having these things will likely also help existing developers by offloading some thinking. Separate learning about the domain from learning about the code. You could even prepare flashcards for both.
 
@@ -529,7 +547,7 @@ The text comprehension techniques mentioned earlier can also be used when onboar
 
 * Activating - Explain relevant concepts before the code reading session starts
 * Determining importance - It can be hard for a newcomer to determine what's important. So pointing out the most important parts beforehand can help.
-* It can be hard to know details not explicitly mentioned but that have to be inferred. You can point them out or maybe they have already been documented somewhere else.
+* Inferring - It can be hard to know details not explicitly mentioned but that have to be inferred. You can point them out or maybe they have already been documented somewhere else.
 * Monitoring - Regularly check the level of understanding by asking questions or asking them to give a quick summary of concepts or parts of the code and help them improve their understanding while doing so.
 * Visualize - Either ask the newcomer to draw a diagram to further their understanding or prepare it yourself beforehand to help with teaching.
 * Questioning - Ask them questions, or encourage them to ask questions as well. When you see they start guessing answers, it is probably a signal that they are starting to suffer from cognitive overload.
