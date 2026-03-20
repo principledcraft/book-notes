@@ -319,3 +319,61 @@ Arnaoudova describes the following linguistic antipatterns:
 
 When studying these in open source codebases it was quite prevalent. E.g. 64 percent of variables starting with 'is' are not boolean. Science confirms that these antipatterns create a higher cognitive load (Fakhoury). It might lead you to retrieve wrong information form your LTM, or make assumptions causing you not to investigate further.
 
+### Chapter 10 - Getting better at solving complex problems
+
+The elements of problem solving:
+
+* The goal state, when the problem is considered solved.
+* The start stage, the initial state before problem is solved
+* The rules that lay out how we can reach the goal from the start.
+
+Rules of the problem often come in the form of constraints, such as programming language or dealing with already existing functionality.
+
+All steps we can consider while solving a program is called the state space. The problem solver has to select the best path through this space to reach the goal.
+
+Research has consistently shown that generic problem solving methods do not apply and that problem solvig is neither a generic skill or a cognitive process because the ability to solve a problem relies heavily on prior knowledge regardless of skill or cognitive ability.
+
+Also when using a generic approach your brain tries to retrieve useful memories, but since the approach is to generic, strategies related to specific ways of solving the problem might not be found. The more specific the connections the better. As covered earlier, knowledge transfer from a domain like chess to mathematics is less likely, as is transfer from a generic domain to a specific one.
+
+#### LTM and problem solving
+
+When solving a problem, your LTM is searched for memories relevant to the problem to be solved.
+
+There are different types of memories
+
+* Procedural or implicit - Unconcious e.g. knowning how to tie shoe laces
+* Declarative or explicit - Facts / things you can remmber, there are two types:
+  * Episodic - How did you experience a situation in the past
+  * Semantic - Memory for meaning, concepts or facts.
+
+Implicit memories also play a role when programming, e.g. remembering certain shortcuts or having certain intuition on how to solve a problem.
+However, such things can also be hard to unlearn, and thus hinder you when learning something new.
+
+#### Automatization and creating implicit memories
+
+When you do something over and over, you can eventually do it without thinking about it, it takes hardly any extra cognitive energy. This frees up more cognitive cacapity to solve bigger and more complex problems. You train these types of memories by repetition. The more implicit memories you have, the easier it becomes to program more complex things.
+
+Declarative knowledge can bepracticed with flashcards, however implicit memory is created by repeated pracice / doing it.
+
+Implicit memories are formed in three phases:
+
+* Cognitive phase -You have to split the problem up into smaller parts and actively think about each part
+* Associative phase - You actively repeat the new information until you see patterns of automatic response emmerge.
+* You can take the action or process the same type of information without thinking. Thus it will not add to the cognitive load a problem poses.
+
+Gordon Logan argues that automatization works by retrieving memories from episodic memory in the LTM. Retrieving such a memory is easier than actively reasoning about it an using up cognitive load. It might we worth to examine your own implicit skills to know where to improve.
+
+To strenghten these explicit memories, you can practice writing the same thing over and over. Also you could try to adapt existing code to use a new concept to become more familiair with it and comparing the different froms actively. Although this type of practice is not commonly done in programming culture, it can really help strengthen your automatization.
+Spaced repetiiton is key to learning.
+
+### Learning from code an its explanation
+
+Deliberate practice can improve small programming skills, however it is not enough to become better at problem solving. What you can do to strenghten your problem solving skills is to search for worked examples, where others have already described how they solved a similar problem. It has been shown to improve performance agross multiple domains and across age groups.
+
+Germane load is the effort it takes to store what you have learned back to the LTM for future retrieval. Thus it is not the most effective just to solve problems on your own even though this seems counterintuitive. Worked examples allow you to offload some cognitive load, giving you a higher chance that relevant concepts are stored back into the LTM.
+
+Worked examples can include:
+
+* Collaborate with a colleague
+* Exploring GitHub and reading code
+* Read blogs and books about source code
