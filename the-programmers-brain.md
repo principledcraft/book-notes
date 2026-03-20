@@ -317,7 +317,7 @@ Arnaoudova describes the following linguistic antipatterns:
 * Identifiers whose names say that they contain less than they do
 * Identifiers that contain the opposite of what the entity contains
 
-When studying these in open source codebases it was quite prevalent. E.g. 64 percent of variables starting with 'is' are not boolean. Science confirms that these antipatterns create a higher cognitive load (Fakhoury). It might lead you to retrieve wrong information form your LTM, or make assumptions causing you not to investigate further.
+When studying these in open source codebases it was quite prevalent. E.g. 64 percent of variables starting with 'is' are not boolean. Science confirms that these antipatterns create a higher cognitive load (Fakhoury). It might lead you to retrieve wrong information from your LTM, or make assumptions causing you not to investigate further.
 
 ### Chapter 10 - Getting better at solving complex problems
 
@@ -331,9 +331,9 @@ Rules of the problem often come in the form of constraints, such as programming 
 
 All steps we can consider while solving a program is called the state space. The problem solver has to select the best path through this space to reach the goal.
 
-Research has consistently shown that generic problem solving methods do not apply and that problem solvig is neither a generic skill or a cognitive process because the ability to solve a problem relies heavily on prior knowledge regardless of skill or cognitive ability.
+Research has consistently shown that generic problem solving methods do not apply and that problem solving is neither a generic skill or a cognitive process because the ability to solve a problem relies heavily on prior knowledge regardless of skill or cognitive ability.
 
-Also when using a generic approach your brain tries to retrieve useful memories, but since the approach is to generic, strategies related to specific ways of solving the problem might not be found. The more specific the connections the better. As covered earlier, knowledge transfer from a domain like chess to mathematics is less likely, as is transfer from a generic domain to a specific one.
+Also when using a generic approach your brain tries to retrieve useful memories, but since the approach is too generic, strategies related to specific ways of solving the problem might not be found. The more specific the connections the better. As covered earlier, knowledge transfer from a domain like chess to mathematics is less likely, as is transfer from a generic domain to a specific one.
 
 #### LTM and problem solving
 
@@ -341,8 +341,8 @@ When solving a problem, your LTM is searched for memories relevant to the proble
 
 There are different types of memories
 
-* Procedural or implicit - Unconcious e.g. knowning how to tie shoe laces
-* Declarative or explicit - Facts / things you can remmber, there are two types:
+* Procedural or implicit - Unconscious e.g. knowing how to tie shoe laces
+* Declarative or explicit - Facts / things you can remember, there are two types:
   * Episodic - How did you experience a situation in the past
   * Semantic - Memory for meaning, concepts or facts.
 
@@ -351,24 +351,24 @@ However, such things can also be hard to unlearn, and thus hinder you when learn
 
 #### Automatization and creating implicit memories
 
-When you do something over and over, you can eventually do it without thinking about it, it takes hardly any extra cognitive energy. This frees up more cognitive cacapity to solve bigger and more complex problems. You train these types of memories by repetition. The more implicit memories you have, the easier it becomes to program more complex things.
+When you do something over and over, you can eventually do it without thinking about it, it takes hardly any extra cognitive energy. This frees up more cognitive capacity to solve bigger and more complex problems. You train these types of memories by repetition. The more implicit memories you have, the easier it becomes to program more complex things.
 
-Declarative knowledge can bepracticed with flashcards, however implicit memory is created by repeated pracice / doing it.
+Declarative knowledge can be practiced with flashcards, however implicit memory is created by repeated practice / doing it.
 
 Implicit memories are formed in three phases:
 
 * Cognitive phase -You have to split the problem up into smaller parts and actively think about each part
-* Associative phase - You actively repeat the new information until you see patterns of automatic response emmerge.
+* Associative phase - You actively repeat the new information until you see patterns of automatic response emerge.
 * You can take the action or process the same type of information without thinking. Thus it will not add to the cognitive load a problem poses.
 
-Gordon Logan argues that automatization works by retrieving memories from episodic memory in the LTM. Retrieving such a memory is easier than actively reasoning about it an using up cognitive load. It might we worth to examine your own implicit skills to know where to improve.
+Gordon Logan argues that automatization works by retrieving memories from episodic memory in the LTM. Retrieving such a memory is easier than actively reasoning about it and using up cognitive load. It might be worth to examine your own implicit skills to know where to improve.
 
-To strenghten these explicit memories, you can practice writing the same thing over and over. Also you could try to adapt existing code to use a new concept to become more familiair with it and comparing the different froms actively. Although this type of practice is not commonly done in programming culture, it can really help strengthen your automatization.
-Spaced repetiiton is key to learning.
+To strengthen these explicit memories, you can practice writing the same thing over and over. Also you could try to adapt existing code to use a new concept to become more familiar with it and comparing the different forms actively. Although this type of practice is not commonly done in programming culture, it can really help strengthen your automatization.
+Spaced repetition is key to learning.
 
-### Learning from code an its explanation
+#### Learning from code and its explanation
 
-Deliberate practice can improve small programming skills, however it is not enough to become better at problem solving. What you can do to strenghten your problem solving skills is to search for worked examples, where others have already described how they solved a similar problem. It has been shown to improve performance agross multiple domains and across age groups.
+Deliberate practice can improve small programming skills, however it is not enough to become better at problem solving. What you can do to strengthen your problem solving skills is to search for worked examples, where others have already described how they solved a similar problem. It has been shown to improve performance across multiple domains and across age groups.
 
 Germane load is the effort it takes to store what you have learned back to the LTM for future retrieval. Thus it is not the most effective just to solve problems on your own even though this seems counterintuitive. Worked examples allow you to offload some cognitive load, giving you a higher chance that relevant concepts are stored back into the LTM.
 
@@ -377,3 +377,89 @@ Worked examples can include:
 * Collaborate with a colleague
 * Exploring GitHub and reading code
 * Read blogs and books about source code
+
+## Part 4 - On collaborating on code
+
+### Chapter 11 - The act of writing code
+
+Petre and Blackwell defined the cognitive dimensions of notation (CDN) framework, which discusses several activities during programming and their cognitive impact:
+
+* Searching - You are reading an executing code to search for something in particular. This is hard on STM, you have to remember the problem and what avenues of code you already explored. Therefore it is best to offload pieces of your cognitive load to notes or a separate document. It can also be helpful to leave little breadcrumbs in the form of comments while searching, especially if you cannot finish the search in one go.
+
+* Comprehension - Similar to search, but here you do not have a good understanding of what the code does in detail. Here refactoring can help as well as offloading working memory by e.g. drawing a model, and update it if you learn more. This helps not having to get it from your memory later. It can also help prevent misconceptions. If you continue at a later time, this model can help you get back into the task.
+
+* Transcription - The part where you have a plan and are just coding. Its mainly hard on LTM since you have to recall syntax and patterns for implementation.
+
+* Incrementation - A mix of all three where you search and try to understand the code to later add e.g. a new  feature. This is the most common form you encounter as a programmer. Since it encompasses all three, it needs the most support memory wise, especially if you are new to the codebase. Split up a big task in smaller tasks and be deliberate on which subtask you are working on. This can help retrieve relevant concepts from memory. First search, then try to comprehend and only then increment.
+
+* Exploration - Similar to incrementation, when trying out a new concept or blocking out a piece of code. Since it also involves all aforementioned processes, here too offloading can be a good idea, for example by drawing a rough sketch of the concept or a diagram.
+
+Debugging can be described as a mix of all 5 of these activities.
+
+#### Interruptions
+
+Solingen found that 20% of a developers time is spent on interruptions and they can take 15-20 minutes each.
+These results were confirmed by Parnin. Also when developers are surveyed 62% indicate that this is a serious problem.
+
+Nakagawa found that the brain indeed seems to warm up and cool down in between tasks, and that the cognitive load in the middle of the task was highest. Therefore it can help to split a problem into smaller subtasks.
+Parnin unsurprisingly found that interruptions are quite disruptive to workflow and require re-warming up and re-forming the mental model before coding again.
+
+To better deal with these interruptions it can help to store your mental model in notes, drawings and diagrams. Writing comments has gotten a bad rap, but code itself does not often explain the goal, the why and what alternatives were considered. John Ousterhout puts it as "The overall idea behind comments is to capture information that was in the mind of the designer but couldn't be represented in the code.".
+
+Fred Brooks says on comments that they are most useful for comprehension because they always exist with the code, while retrieving relevant documents takes time and can cause extra cognitive load. Therefore it can be helpful to temporarily store your mental model in a comment when you are interrupted.
+
+Prospective memory is remembering having to do something in the future. Thus it is closely related to problem solving and planning. You can help yourself by leaving TODO comments, sticky notes or email, or having a separate list.
+
+If you divide your task in subgoals and document them, it is easier to return to the task later. Subgoals can also be documented in code and serve as documentation for future implementation by others.
+
+Bailey discovered unsurprisingly that tasks that are interrupted take longer to complete. Also people that are interrupted displayed more anxiety. Thus it is good to actively think about when it is best to interrupt or how to signal if you are busy or not.
+
+#### Multitasking and automatizing
+
+It has been shown over and over again that we cannot effectively multitask. This is if you have not yet reached the implicit memory stage and a second task does not happen almost automatically. Even though, counterintuitively people that multitask often feel very productive. Thus programming while on Slack might not be the best idea.
+
+### Chapter 12 - Designing and improving larger systems
+
+Green, Blackwell and Petre defined a framework to look at the cognitive dimensions of codebases called the *cognitive dimensions of code bases* (CDCB) framework, defining the following dimensions:
+
+* Error proneness - How error prone is the codebase, due to lack of documentation, vague names, or inconsistent conventions. Hanenberg shows that statically typed systems outperformed dynamic ones in terms of time and accuracy of programmers finding bugs.
+  
+* Consistency - A language, framework or codebase that is more inconsistent in its use of concepts or names can lead to greater cognitive load because it takes longer to understand and find relevant information.
+
+* Diffuseness - How many lines of code or chunks the code needs to express a concept, less diffuse code will lead to better understandability and readability.
+
+* Hidden dependencies - When it is hard to see which parts of the code depend on others e.g., and having to navigate multiple files to trace it or use IDE features to find definitions and usages. This can be partly compensated for with better documentation, but it is always good to have a policy on how to adopt or integrate a new dependency.
+
+* Provisionality - How easy it is to think while using a tool. If a codebase, workflow or language is very strict it can be hard to express new ideas quickly without e.g. dealing with types always. Then the code is not a model of thought, but just of execution. This is especially the case in learning, as you want to be able to think about what you are writing and not all things around it.
+
+* Viscosity - How hard it is to make changes in a certain system. Code that is dynamically typed is easier to change than the statically typed ones. Also code that is not very modular and where a change requires modification in different places can also lower viscosity. In addition, if it takes a long time to compile or test that also has negative effects.
+
+* Progressive evaluation - How easy it is to run or check partial incomplete work. Some systems support live programming (hot reloading) where code can be changed without having to be rerun or recompiled. Another way to do this is to give a library or function some parameters that can be changed while the program is running, thus being able to evaluate changes separately in a live system.
+
+* Role expressiveness - How easy it is to see the role of different parts in a program, e.g. by function name, syntax conventions (e.g. for booleans set vs is_set variable name), or syntax highlighting. Another example is the earlier mentioned linguistic antipatterns. They can also lower role expressiveness and lower understanding.
+
+* Closeness of mapping - How well a programming language or code maps to the domain and problem being solved. Some languages like COBOL or doing things in Excel map closely to the financial domain. For codebases this can be achieved by using names and mapping the software using names and concepts close to the business domain.
+
+* Hard mental operations - Some systems require the user to think very hard. This could be due to use of more difficult programming languages, using a large number of parameters and having to remember the order. Vague names also require harder mental work, or combining two already difficult concepts into a new one. This doesn't have to be all bad and can be a conscious choice, but it is good to beware of the tradeoffs when making decisions.
+
+* Secondary notation - The ability to add comments or keyword names to function calls, providing extra context to the reader and thus making it easier to understand.
+
+* Abstraction - How easy it is for people to create their own level of abstraction in a language. Mostly available in all programming languages now (writers note: maybe this can also be interpreted as how well the system is abstracted, high level concepts that are separated from lower level ones?)
+
+* Visibility - How easy it is to see different parts of the system. E.g. it can be hard to see what parts a system consists of if it is spread over many different locations or files. Return types can also impact visibility e.g. the difference between a string, json and an object in terms of readability and understandability.
+
+#### Design maneuvers and their trade-offs
+
+* Error proneness vs viscosity - If you want users of your code to make fewer mistakes, it is likely that you require them to enter more information. Typing is an example of this. The use of typing will likely reduce errors, but it will make it more work to change the system, thus lowering viscosity.
+* Provisionality and progressive evaluation vs. error proneness. The easier it is to work with and run imperfect code, the more likely it is that this code is never properly finished but used instead, increasing the chance of errors.
+* Role expression vs diffuseness - Adding additional syntactic elements such as keyword arguments and types can increase role expression, but increase diffuseness.
+
+### Dimensions and activities
+
+* Searching -  Hidden dependencies can harm searching. Diffuseness causes code to be longer which harms searching. Secondary notation can help searchability.
+* Comprehension - low visibility can harm comprehension because it is harder to see how things relate, making understanding harder. Role expressiveness can help comprehension.
+* Transcription - Consistency means you will have to fit your code into an existing model, requiring more mental effort.
+* Incrementation - Adding new features to a codebase is related to closeness of mapping. It allows thinking about the goal and less about programming concepts.
+* Exploration - Explored by good progressive evaluation and provisionality. Hard mental operations and abstractions can harm exploration because they place a higher cognitive load on the programmer (writers note: but doesn't abstraction make it easier? I'd say the lack of abstraction harms exploration).
+
+Knowing which activities will most likely be conducted in the codebase can help you choose the right design decisions. Based on the lifetime of the code the emphasis might also change.
