@@ -1,6 +1,6 @@
 # Code that fits in your head
 
-Mark Seemann  ·  Pearson  ·  November 2021
+Mark Seemann · Pearson · November 2021
 
 ## Summary
 
@@ -9,17 +9,17 @@ Mark Seemann  ·  Pearson  ·  November 2021
 It is hard to pick a good metaphor when talking about the profession of software engineering / programming. If you compare it with building a house, it will go wrong because:
 
 * Software is not a project with a start and an end, most software keeps evolving and responding to external factors.
-* You are continually planning and executing in loops, not in predefined phases
+* You are continually planning and executing in loops, not in predefined phases.
 * You can start pieces that depend on each other out of order if you want. You might miss opportunities if you always build from the bottom up.
 
 Gardening might serve as a better metaphor where:
 
-* Software is a living organism and you need to tend to it, it keeps evolving
+* Software is a living organism and you need to tend to it, it keeps evolving.
 * You need to prevent code rot rather than just taking away dead plants and weeds retroactively
 
 Yet, it is not perfect because
 
-* Software doesn't just grow on its own, it's a deliberate action
+* Software doesn't just grow on its own, it's a deliberate action.
 
 There are other metaphors such as accounting for technical debt and it being akin to other kinds of writing. None of the metaphors are completely wrong, but none are perfect.
 
@@ -49,7 +49,7 @@ Using a checklist as a memory aid frees you up to focus on the more important pa
 
 A deliberately rough checklist for new codebases is:
 
-* Use git - it allows experimentation with your code
+* Use git - it allows experimentation with your code.
 * Automate the build (writes note: and deploy) - Easiest to do if there is little code, do this as soon as possible.
 * Turn on all error messages - Use linters, code styling tools and other early warning systems and turn them all on, make warnings errors. It is easy to do in the beginning, much harder. It can also serve as a sort of automated quality gate, making it harder to argue against if it was agreed upon at an earlier stage.
 
