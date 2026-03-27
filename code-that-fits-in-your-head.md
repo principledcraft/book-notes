@@ -66,3 +66,17 @@ Likening a computer to a brain is not a good metaphor. Computers are exact, whil
 You spend more time reading than writing code. To write new features or fix a bug you must first understand what is already there. Therefore, you must optimize code for readability. Code that is hard to understand slows you down, but code that is easy to understand speeds you up tenfold.
 
 When writing code you are aware of the context in which you write it. Later, when you read it again, all that context is gone, and all that remains is the code. Readable code cannot be written just based on intuition, you need checklists, heuristics etc.
+
+### Intellectual work
+
+Programming involves a lot of unconscious mental activity. You can be "in the zone" and produce code without deliberate awareness. Kahneman's model of System 1 (fast, automatic, error-prone) and System 2 (slow, deliberate, effortful) applies to programming. System 1 is always running in the background trying to make sense of code, but it jumps to conclusions easily (like the bat-and-ball problem where most people answer 10 cents instead of the correct 5 cents).
+
+Because System 1 only works with currently activated information (what you see is all there is — WYSIATI), code should be organised so that all relevant information is visible at the same time. This explains why global variables and hidden side effects make code hard to understand — they are not visible when looking at a piece of code, so System 1 does not account for them.
+
+### Towards software engineering
+
+Software engineering should support the organisation and allow changes at a sustainable pace. Computer science can help but is not the same as software engineering, just as physics is not mechanical engineering. Results from computer science (sorting algorithms, data structures) can be packaged into reusable libraries — you don't need to understand B-trees to query a database.
+
+The remaining challenge is to organise code so that it fits in the human brain. Code must be humane: small, self-contained functions with fewer than seven dependencies, cyclomatic complexity at most seven, and so on. The number seven is used throughout the book as a proxy for the brain's working memory limit.
+
+Software engineering should be the deliberate process of preventing complexity from growing. This may feel like it slows you down, but as Rainsberger puts it, you probably need to slow down — the faster you type, the more code everyone has to maintain. Code is not an asset, it is a liability. Its by applying good architecture that you can maintain a sustainable pace.
