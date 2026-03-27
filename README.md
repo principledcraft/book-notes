@@ -2,7 +2,7 @@
 
 A personal collection of notes written about the books I read, that I use as input for content for my website [principledcraft.dev](www.principledcraft.dev)
 
-Everything is human written and curated by me. AI is used occasionally to do checking and correction of spelling or to help with dictation.
+Everything is curated by me. AI is used occasionally to help with summarizing and do checking and correction of spelling or to help with dictation.
 
 ## Note on sources
 
